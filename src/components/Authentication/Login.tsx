@@ -5,7 +5,7 @@ import * as Toast from "@radix-ui/react-toast";
 import axios from "axios";
 import { useRouter } from "next/router";
 
-type Props = {};
+type Props = object;
 
 function Login({}: Props) {
   const [open, setOpen] = useState(false);
