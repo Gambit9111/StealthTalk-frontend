@@ -45,13 +45,13 @@ function Signup({}: Props) {
         },
       };
       const { data } = await axios.post(
-        "http://localhost:3001/api/user",
+        "https://stealthtalk-backend-production.up.railway.app/api/user",
         { username, password },
         config
       );
 
       localStorage.setItem("userInfo", JSON.stringify(data));
-      Router.push("http://localhost:3000/chats");
+      Router.push("/chats");
     } catch (error) {
       // @ts-ignore
       setToastError(error.response.data.message);

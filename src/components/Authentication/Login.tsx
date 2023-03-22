@@ -34,13 +34,13 @@ function Login({}: Props) {
         },
       };
       const { data } = await axios.post(
-        "http://localhost:3001/api/user/login",
+        "https://stealthtalk-backend-production.up.railway.app/api/user/login",
         { username, password },
         config
       );
 
       localStorage.setItem("userInfo", JSON.stringify(data));
-      router.push("http://localhost:3000/chats");
+      router.push("/chats");
     } catch (error) {
       // @ts-ignore
       setToastError(error.response.data.message);
